@@ -51,17 +51,6 @@ localStorage.setItem (`carrito`, JSON.stringify(carrito))
 
 /**FUNCIONES */
 
-//Agregar al carrito
-const agregarAlCarrito = (idProducto) => {
-
-    const itemAgregar = stock.find ((productoEnStock)=> productoEnStock.id === idProducto)
-
-    carrito.push (itemAgregar)
-
-    actualizarCarrito()
-}
-
-
 //Por cada producto en el carrito creo un article en HTML
     function actualizarCarrito () {
 
@@ -93,6 +82,17 @@ const agregarAlCarrito = (idProducto) => {
         })
 }
 
+//Agregar al carrito
+const agregarAlCarrito = (idProducto) => {
+
+    const itemAgregar = stock.find ((productoEnStock)=> productoEnStock.id === idProducto)
+
+    carrito.push (itemAgregar)
+    
+    console.log (carrito)
+
+    actualizarCarrito()
+}
 
 //Borrar articulo del carrito:
 const eliminarDelCarrito = (idProducto) => {
@@ -102,6 +102,8 @@ const eliminarDelCarrito = (idProducto) => {
     const indexItem = carrito.indexOf (itemBorrar)
     
     carrito.splice(indexItem,1)
+
+    console.log (carrito)
 
     actualizarCarrito()
 
@@ -117,5 +119,4 @@ const eliminarTodoElCarro = () => {
     console.log (carrito)
 }
 
-
-vaciarTodoElCarro.addEventListener (`click`, eliminarDelCarrito)
+vaciarTodoElCarro.addEventListener (`click`, eliminarTodoElCarro)
