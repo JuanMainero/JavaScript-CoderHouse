@@ -49,7 +49,7 @@ const fetchData = async () => {
 const pintarCards = arrayDeDatos => {
     arrayDeDatos.forEach(elementoEnArray => {
         cardTemplate.querySelector(`h5`).textContent = elementoEnArray.destino
-        cardTemplate.querySelector(`p`).textContent = "$" + elementoEnArray.precio
+        cardTemplate.querySelector(`p`).textContent = elementoEnArray.precio
         cardTemplate.querySelector(`.btn-primary`).dataset.id = elementoEnArray.id
         const clon = cardTemplate.cloneNode(true)
         fragment.appendChild(clon)
