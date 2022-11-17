@@ -1,0 +1,22 @@
+[
+    {
+      "precio": 5000,
+      "id": 1,
+      "destino": "Nueva York"
+    },
+    {
+      "precio": 3000,
+      "id": 2,
+      "destino": "Buenos Aires"
+    },
+    {
+      "precio": 1000,
+      "id": 3,
+      "destino": "Paris"
+    },
+    {
+      "precio": 7000,
+      "id": 4,
+      "destino": "Qatar"
+    }
+  ]
